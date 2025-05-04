@@ -1,0 +1,46 @@
+[
+  {
+    "id": 0,
+    "title": "Pera",
+    "description": "fruta feliz",
+    "code": "07107",
+    "price": 20,
+    "status": true,
+    "stock": 5,
+    "category": "fruta",
+    "thumbnails": "https://juanesparraguito.com/cdn/shop/files/FotosWeb_parte1_Mesadetrabajo1copia77.jpg?v=1710855795&width=1214"
+  },
+  {
+    "id": 1,
+    "title": "manzana",
+    "description": "fruta feliz",
+    "code": "07207",
+    "price": 18,
+    "status": true,
+    "stock": 10,
+    "category": "fruta",
+    "thumbnails": "https://www.recetasnestlecam.com/sites/default/files/2022-04/tipos-de-manzana-royal-gala.jpg"
+  },
+  {
+    "id": 2,
+    "title": "galletas",
+    "description": "dulce con chocolate",
+    "code": "03367",
+    "price": 15,
+    "status": true,
+    "stock": 20,
+    "category": "dulce",
+    "thumbnails": "https://i.ytimg.com/vi/cYzVUdC_2hc/maxresdefault.jpg"
+  },
+  {
+    "id": 5,
+    "title": "sword",
+    "description": "ninja weapon",
+    "code": "as334ef",
+    "price": 350,
+    "status": true,
+    "stock": 2,
+    "category": "weapon",
+    "thumbnails": "https://epicforge.cl/cdn/shop/products/FRONTAL_576f8ae2-3493-4d08-9e8b-86c64a39f98e.jpg?v=1678739103&width=4168"
+  }
+]

@@ -1,0 +1,6 @@
+# var entorno
+.env
+.idea
+
+#Dependenci
+node_modules
