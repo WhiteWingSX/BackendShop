@@ -8,7 +8,7 @@ Proyecto que consiste en manipular productos y carritos a traves de la metodolog
 
 ### Como inicializar
 
-1. descarga el proyecto de GitHud utilizando `git clone`
+1. descarga el proyecto de GitHud utilizando `git clone https://github.com/WhiteWingSX/BackendShop.git`
 2. descarga los modulos de node `npm i`
 3. inicia el proyecto `npm start`
 4. inicializa postman y realiza las pruebas que desees, las rutas a considerar son las siguientes:
