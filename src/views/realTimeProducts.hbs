@@ -1,0 +1,108 @@
+<main class="mainRealTime">
+    <div>
+        <div class="titlebar">
+            <h1>Productos en tiempo real</h1>
+        </div>
+        <div>
+            <ul id="product-list">
+                {{#each products}}
+                    <li>{{this.title}} - ${{this.price}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <!--Separador-->
+    <div style="margin-left: 100px"></div>
+
+    <div class="addProductContainer">
+        <div class="titleAdd">
+            <h2 style="text-align: center; color: #fff; margin: 0">Agregar producto</h2>
+        </div>
+            <form id="product-form">
+                <div class="productItem">
+                    <label for="text">Nombre del producto</label>
+                    <input type="text" name="title" placeholder="Nombre del producto" required />
+                </div>
+                <div class="productItem">
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" placeholder="Precio" required />
+                </div>
+                <div class="productItem">
+                    <label for="code">Codigo</label>
+                    <input type="text" name="code" placeholder="Codigo" required />
+                </div>
+                <div class="productItem">
+                    <label for="stock">Cantidad</label>
+                    <input type="number" name="stock" placeholder="Cantidad" required />
+                </div>
+                <div class="productItem">
+                    <label for="category">Categoria</label>
+                    <input type="text" name="category" placeholder="Categoria" required />
+                </div>
+                <div class="productItem">
+                    <label for="thumbnails">URL imagen</label>
+                    <input type="text" name="thumbnails" placeholder="URL imagen" required />
+                </div>
+                <div class="productItem">
+                    <label for="description">Descripcion</label>
+                    <input type="text" name="description" placeholder="Descripcion" required />
+                </div>
+                <div class="productItem">
+                    <label for="price">Precio</label>
+                    <select name="status" required >
+                        <option value="true">Disponible</option>
+                        <option value="false">Sin Stock</option>
+                    </select>
+                </div>
+                <div class="btnContainer">
+                    <button class="btnSubmit" type="submit">Agregar</button>
+                </div>
+
+            </form>
+    </div>
+
+</main>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io();
+
+    const form = document.getElementById('product-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const product = {
+            title: formData.get('title'),
+            description: formData.get('description'),
+            price: Number(formData.get('price')),
+            thumbnails: formData.get('thumbnails'),
+            code: formData.get('code'),
+            stock: Number(formData.get('stock')),
+            status: formData.get('status') === "true",
+            category: formData.get('category'),
+        };
+        socket.emit('new-product', product);
+        form.reset();
+    });
+
+    socket.on('product-list', (products) => {
+        const list = document.getElementById('product-list');
+        list.innerHTML = '';
+        products.forEach(p => {
+            const li = document.createElement('li');
+            li.innerText = `${p.title} - $${p.price}`;
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'X';
+            deleteBtn.classList.add('btnDelete');
+            deleteBtn.onclick = () => {
+                socket.emit('delete-product', p.id);
+            };
+
+            li.appendChild(deleteBtn);
+            list.appendChild(li);
+        });
+    });
+</script>

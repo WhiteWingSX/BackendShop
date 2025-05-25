@@ -33,14 +33,16 @@
     "thumbnails": "https://i.ytimg.com/vi/cYzVUdC_2hc/maxresdefault.jpg"
   },
   {
-    "id": 5,
-    "title": "sword",
-    "description": "ninja weapon",
-    "code": "as334ef",
-    "price": 350,
+    "id": 6,
+    "title": "mono",
+    "description": "un animal feliz",
+    "code": "b3hb43",
+    "price": 200,
     "status": true,
-    "stock": 2,
-    "category": "weapon",
-    "thumbnails": "https://epicforge.cl/cdn/shop/products/FRONTAL_576f8ae2-3493-4d08-9e8b-86c64a39f98e.jpg?v=1678739103&width=4168"
+    "stock": 5,
+    "category": "Animal",
+    "thumbnails": [
+      "https://monkeyworlds.com/wp-content/uploads/human-monkey.webp"
+    ]
   }
 ]

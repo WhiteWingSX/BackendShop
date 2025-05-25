@@ -1,0 +1,12 @@
+<main class="homeTitle">
+    <div class="titlebar">
+        <h1>Lista de productos</h1>
+    </div>
+    <div>
+        <ul>
+            {{#each products}}
+                <li>{{this.title}} - ${{this.price}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</main>

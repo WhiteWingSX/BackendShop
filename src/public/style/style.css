@@ -1,0 +1,129 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.homeTitle {
+    margin-top: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainRealTime {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.titlebar {
+    border: 1px solid #000000;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    max-width: 25em;
+    padding: 0 1em;
+    background-color: #2361da;
+    text-align: center;
+}
+
+.titleAdd {
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    max-width: 25em;
+    height: 2em;
+    background-color: #25df34;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 1em;
+    display: flex;
+    list-style-type: none;
+    border: 1px solid #000;
+}
+
+.addProductContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#product-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 4px;
+}
+
+#product-form {
+    display: grid;
+}
+
+.productItem {
+    margin: 3px 1em;
+    display: grid;
+}
+
+.btnContainer {
+    display: flex;
+    margin: 3px 1em;
+    justify-content: space-between;
+}
+
+.btnSubmit {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    width: 100%;
+    background-color: #dfdfdf;
+    color: #25df34;
+}
+
+.btnSubmit:hover {
+    background-color: #25df34;
+    color: #ffffff;
+}
+
+.btnDelete {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: #dfdfdf;
+    color: #bd3219;
+}
+
+.btnDelete:hover {
+    background-color: #bd3219;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px 0;
+    background-color: #232323;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #000;
+}
