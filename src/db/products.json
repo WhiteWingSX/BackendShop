@@ -1,48 +1,252 @@
 [
   {
-    "id": 0,
     "title": "Pera",
-    "description": "fruta feliz",
-    "code": "07107",
+    "description": "pera deliciosa",
+    "code": "00001",
     "price": 20,
-    "status": true,
-    "stock": 5,
-    "category": "fruta",
-    "thumbnails": "https://juanesparraguito.com/cdn/shop/files/FotosWeb_parte1_Mesadetrabajo1copia77.jpg?v=1710855795&width=1214"
-  },
-  {
-    "id": 1,
-    "title": "manzana",
-    "description": "fruta feliz",
-    "code": "07207",
-    "price": 18,
     "status": true,
     "stock": 10,
     "category": "fruta",
-    "thumbnails": "https://www.recetasnestlecam.com/sites/default/files/2022-04/tipos-de-manzana-royal-gala.jpg"
+    "thumbnails": "https://example.com/images/pera.jpg"
   },
   {
-    "id": 2,
-    "title": "galletas",
-    "description": "dulce con chocolate",
-    "code": "03367",
-    "price": 15,
+    "title": "Manzana",
+    "description": "manzana jugosa",
+    "code": "00002",
+    "price": 25,
+    "status": true,
+    "stock": 15,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/manzana.jpg"
+  },
+  {
+    "title": "Banana",
+    "description": "banana madura",
+    "code": "00003",
+    "price": 18,
+    "status": true,
+    "stock": 12,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/banana.jpg"
+  },
+  {
+    "title": "Naranja",
+    "description": "naranja dulce",
+    "code": "00004",
+    "price": 22,
+    "status": true,
+    "stock": 14,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/naranja.jpg"
+  },
+  {
+    "title": "Mandarina",
+    "description": "mandarina cítrica",
+    "code": "00005",
+    "price": 20,
+    "status": true,
+    "stock": 16,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/mandarina.jpg"
+  },
+  {
+    "title": "Kiwi",
+    "description": "kiwi exótico",
+    "code": "00006",
+    "price": 35,
+    "status": true,
+    "stock": 9,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/kiwi.jpg"
+  },
+  {
+    "title": "Sandía",
+    "description": "sandía refrescante",
+    "code": "00007",
+    "price": 30,
+    "status": true,
+    "stock": 8,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/sandia.jpg"
+  },
+  {
+    "title": "Melón",
+    "description": "melón dulce",
+    "code": "00008",
+    "price": 28,
+    "status": true,
+    "stock": 13,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/melon.jpg"
+  },
+  {
+    "title": "Durazno",
+    "description": "durazno jugoso",
+    "code": "00009",
+    "price": 24,
+    "status": true,
+    "stock": 11,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/durazno.jpg"
+  },
+  {
+    "title": "Cereza",
+    "description": "cereza roja",
+    "code": "00010",
+    "price": 40,
+    "status": true,
+    "stock": 7,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/cereza.jpg"
+  },
+  {
+    "title": "Uva",
+    "description": "uva morada",
+    "code": "00011",
+    "price": 26,
     "status": true,
     "stock": 20,
-    "category": "dulce",
-    "thumbnails": "https://i.ytimg.com/vi/cYzVUdC_2hc/maxresdefault.jpg"
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/uva.jpg"
   },
   {
-    "id": 6,
-    "title": "mono",
-    "description": "un animal feliz",
-    "code": "b3hb43",
-    "price": 200,
+    "title": "Papaya",
+    "description": "papaya tropical",
+    "code": "00012",
+    "price": 32,
     "status": true,
-    "stock": 5,
-    "category": "Animal",
-    "thumbnails": [
-      "https://monkeyworlds.com/wp-content/uploads/human-monkey.webp"
-    ]
+    "stock": 10,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/papaya.jpg"
+  },
+  {
+    "title": "Piña",
+    "description": "piña dorada",
+    "code": "00013",
+    "price": 34,
+    "status": true,
+    "stock": 9,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/pina.jpg"
+  },
+  {
+    "title": "Mango",
+    "description": "mango sabroso",
+    "code": "00014",
+    "price": 29,
+    "status": true,
+    "stock": 11,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/mango.jpg"
+  },
+  {
+    "title": "Frambuesa",
+    "description": "frambuesa roja",
+    "code": "00015",
+    "price": 38,
+    "status": true,
+    "stock": 6,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/frambuesa.jpg"
+  },
+  {
+    "title": "Arándano",
+    "description": "arándano azul",
+    "code": "00016",
+    "price": 36,
+    "status": true,
+    "stock": 8,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/arandano.jpg"
+  },
+  {
+    "title": "Granada",
+    "description": "granada fresca",
+    "code": "00017",
+    "price": 27,
+    "status": true,
+    "stock": 10,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/granada.jpg"
+  },
+  {
+    "title": "Guayaba",
+    "description": "guayaba dulce",
+    "code": "00018",
+    "price": 23,
+    "status": true,
+    "stock": 14,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/guayaba.jpg"
+  },
+  {
+    "title": "Higo",
+    "description": "higo fresco",
+    "code": "00019",
+    "price": 39,
+    "status": true,
+    "stock": 7,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/higo.jpg"
+  },
+  {
+    "title": "Maracuyá",
+    "description": "maracuyá ácido",
+    "code": "00020",
+    "price": 33,
+    "status": true,
+    "stock": 9,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/maracuya.jpg"
+  },
+  {
+    "title": "Tamarindo",
+    "description": "tamarindo tropical",
+    "code": "00021",
+    "price": 21,
+    "status": true,
+    "stock": 15,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/tamarindo.jpg"
+  },
+  {
+    "title": "Ciruela",
+    "description": "ciruela dulce",
+    "code": "00022",
+    "price": 31,
+    "status": true,
+    "stock": 13,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/ciruela.jpg"
+  },
+  {
+    "title": "Lima",
+    "description": "lima cítrica",
+    "code": "00023",
+    "price": 17,
+    "status": true,
+    "stock": 16,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/lima.jpg"
+  },
+  {
+    "title": "Limón",
+    "description": "limón ácido",
+    "code": "00024",
+    "price": 16,
+    "status": true,
+    "stock": 18,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/limon.jpg"
+  },
+  {
+    "title": "Pomelo",
+    "description": "pomelo jugoso",
+    "code": "00025",
+    "price": 19,
+    "status": true,
+    "stock": 12,
+    "category": "fruta",
+    "thumbnails": "https://example.com/images/pomelo.jpg"
   }
 ]

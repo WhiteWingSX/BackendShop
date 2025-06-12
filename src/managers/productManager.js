@@ -70,7 +70,7 @@ class ProductManager {
         return deleted;
     }
 
-    // Guardar data
+    // Guardar db
     async saveProducts(products) {
         await fs.writeFile(this.path, JSON.stringify(products, null, 2));
     }

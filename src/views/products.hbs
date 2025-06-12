@@ -1,0 +1,44 @@
+<h1>Productos</h1>
+
+<a href="/carts/68492eab1c3007343a6655d3">
+    <button>Ver Carrito</button>
+</a>
+
+<hr/>
+
+<ul>
+    {{#each products}}
+        <li style="margin-bottom: 0.5rem; display: grid">
+            <h3>{{this.title}}</h3>
+            <p>{{this.description}}</p>
+            <p><strong>Precio:</strong> ${{this.price}}</p>
+            <p><strong>Categoría:</strong> {{this.category}}</p>
+            <p>Stock: <span id="stock-{{this._id}}">{{this.stock}}</span></p>
+
+            <form action="/api/carts/{{../cartId}}/products/{{this._id}}" method="POST">
+            <button
+                    class="add-to-cart-btn"
+                    data-productid="{{this._id}}"
+                    {{#if (eq this.stock 0)}}disabled{{/if}}>
+                Agregar al carrito
+            </button>
+                </form>
+
+            <a href="/products/{{this._id}}">Detalles</a>
+        </li>
+    {{/each}}
+</ul>
+
+<div style="margin-top: 2rem;">
+    {{#if hasPrevPage}}
+        <a href="?page={{prevPage}}">⬅ Página Anterior</a>
+    {{/if}}
+
+    <span> Página {{page}} de {{totalPages}} </span>
+
+    {{#if hasNextPage}}
+        <a href="?page={{nextPage}}">Página Siguiente ➡</a>
+    {{/if}}
+</div>
+
+<script src="../public/js/cart.js"></script>

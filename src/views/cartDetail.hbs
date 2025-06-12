@@ -1,0 +1,72 @@
+<h1>Detalle del Carrito</h1>
+
+<div style="display: flex; margin-left: 10px">
+    <form action="/api/carts/{{cart._id}}/clear" method="POST" style="margin-bottom: 1rem; margin-right: 1rem">
+        <button type="submit" style="background-color: red; color: white;">Vaciar carrito</button>
+    </form>
+
+    <a href="/products">
+        <button style="margin-bottom: 1rem;">Volver a Productos</button>
+    </a>
+</div>
+
+
+{{#if cart.products.length}}
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+        <tr>
+            <th>ID Producto</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each cart.products}}
+            <tr>
+                <td>{{this.product._id}}</td>
+                <td>{{this.product.title}}</td>
+                <td>{{this.quantity}}</td>
+                <td>{{this.product.description}}</td>
+                <td>
+                    <button
+                            class="remove-product-btn"
+                            data-pid="{{this.product._id}}"
+                            data-cid="{{../cart._id}}"
+                            style="background-color: red; color: white;">
+                        X
+                    </button>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>El carrito está vacío.</p>
+{{/if}}
+
+<script>
+    document.querySelectorAll('.remove-product-btn').forEach(button => {
+        button.addEventListener('click', async () => {
+            const productId = button.dataset.pid;
+            const cartId = button.dataset.cid;
+
+            if (!confirm('¿Seguro que quieres eliminar este producto?')) return;
+
+            try {
+                const response = await fetch(`/api/carts/${cartId}/products/${productId}`, {
+                    method: 'DELETE'
+                });
+
+                if (response.ok) {
+                    alert('Producto eliminado del carrito');
+                    location.reload();
+                } else {
+                    alert('Error al eliminar el producto');
+                }
+            } catch (err) {
+                alert('Error de conexión.');
+            }
+        });
+    });
+</script>
